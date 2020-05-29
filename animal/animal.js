@@ -34,7 +34,7 @@ let dog ={
 
   //利用内部的方法，来修改宠物的名字
   setName : function(newName) {
-    if (!this.isliving()) return;
+    if (!this.isLiving()) return;
     this.name = newName;
   
   },
@@ -52,14 +52,14 @@ let dog ={
   //跑起来
   run : function() {
     //再让他跑之前，判断是否存活
-    if (this.islive ){
+    if (this.isLive ){
       //存活，判断饱食度
       if(this.food <= 20){
       console.log("主人" + this.name +"饿了");
-      } else{
+      } else {
         console.log(this.name + "在草地上撒欢的跑");
         this.food -= 10 ;
-    }
+      } 
     } else {
       console.log(this.name + "没有了生命体征")
     }
@@ -67,7 +67,7 @@ let dog ={
 
   //喂食
   feed:function(){
-    if (this.islive){
+    if (this.isLive){
       this.food = 100 ;
       console.log(this.name + "吃饱了");
     }
@@ -152,12 +152,23 @@ let dog ={
 
 dog.bark();
 dog.tellName();
-dog.isLiving();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
+dog.run();
 dog.run();
 dog.feed();
-dog.live();
-dog.checkFood();
-dog.checkHealth();
+dog.feed();
+dog.feed();
+dog.feed();
+
 
 
 
