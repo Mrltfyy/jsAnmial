@@ -1,6 +1,6 @@
 let dog ={
   //属性
-  name: mahua ,
+  name: "mahua" ,
   age: 3,
 
   //饱食度
@@ -21,14 +21,14 @@ let dog ={
 
   //叫声
   bark: function (){
-  if (!this.isliving()) return;
-  view.displayYell("wang!wang!")
+  if (!this.isLiving()) return;
+    console.log("wang!wang!")
   },
 
   // 告诉别人自己的名字
   tellName :function(){
-    if (!this.isliving()) return;
-    view.displayYell("我的名字叫" + this.name);
+    if (!this.isLiving()) return;
+    console.log("我的名字叫" + this.name);
     return this.name;
   },
 
@@ -102,7 +102,7 @@ let dog ={
 
   //查看健康值，健康值大于100为100，小于100为this.health，小于0就死
   checkHealth: function(){
-    this.health = health >= 100 ? 100 : this.health;
+    this.health = (this.health >= 100 ? 100 : this.health);
     if (this.health <= 0){
       this.dead();
     }
@@ -121,7 +121,6 @@ let dog ={
     return '饱食度:['+this.food+'],健康值:['+this.health+ '],是否存活:['+ (this.isLive ? '活着' : '死了') + ']';
   },
 
-  
 
 
 
@@ -146,7 +145,19 @@ let dog ={
 
 
 
-}
+
+};
+
+
+
+dog.bark();
+dog.tellName();
+dog.isLiving();
+dog.run();
+dog.feed();
+dog.live();
+dog.checkFood();
+dog.checkHealth();
 
 
 
