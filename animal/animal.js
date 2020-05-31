@@ -149,6 +149,16 @@ let dog ={
 };
 
 
+let view = {
+  
+}
+
+
+
+
+
+
+
 
 dog.bark();
 dog.tellName();
